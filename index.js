@@ -5,6 +5,7 @@ import userRoutes from "./routes/userRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import categoryRoutes from "./routes/category.js";
 import cors from "cors";
+// import { swaggerDocs } from "./swagger.js";
 
 dotenv.config();
 
@@ -20,6 +21,8 @@ connectDB();
 app.use("/api/user", userRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/category", categoryRoutes);
+
+// swaggerDocs(app);
 
 app.listen(PORT, () => {
   console.log("server running succesfully");

@@ -18,6 +18,8 @@ const userSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  resetOtp: String,
+  resetOtpExpires: Date,
 });
 
 const User = mongoose.model("User", userSchema);
